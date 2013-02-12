@@ -1,0 +1,6 @@
+for z in range(input()):
+	r=[(-1.0)**x/(2*x + 1) for x in range(input())]
+	s=0
+	for x in r:
+		s+=x
+	print '{0:.15f}'.format(s)
