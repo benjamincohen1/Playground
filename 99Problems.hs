@@ -7,4 +7,4 @@ element_at x k= x!!k
 myLength [] = 0
 myLength (x:xs) = 1+myLength xs
 
-main = print (myReverse [1,2,4,3])
+main = print ( [1,2,4,3])
