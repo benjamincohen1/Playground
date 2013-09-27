@@ -1,0 +1,45 @@
+#Folding Paper problem
+=====================
+As input you are given a string of "L"s and "R"s of length N.
+
+Imagine a strip of paper divided up into 2^N numbered, equally sized squares.
+
+For example: The string "LRL" represents 3 actions on a paper that starts looking like the following:
+
+-----------------
+|1|2|3|4|5|6|7|8|
+-----------------
+
+Were this "LRLR" the paper would be numbered 1-16.
+
+
+The input string is processed left to right.  An "L" command signifies that the paper is folded completely from the left end to the right end.  An "L" command on the above strip would make it look like:
+
+---------
+|4|3|2|1|
+|5|6|7|8|
+---------
+
+An "R" command folds the paper from the right end to the left end.  An "R" command on the above would make it look like:
+
+-----
+|8|7|
+|1|2|
+|4|3|
+|5|6|
+-----
+
+The last left command would make it look like:
+
+---
+|5|
+|4|
+|1|
+|8|
+|7|
+|2|
+|3|
+|6|
+---
+
+Your challenge is to write a simple RESTful API that determines the order, top to bottom, of the numbers, given an input string of "R"s and "L"s and return that item.  As example, the input "LRL" would return "54187236" as seen above.  Input will come via a JSON encoded POST request to the root URL, and should respond with the numbers from top to bottom.  To better visualize this imagine driving a toothpick down from the top to the bottom.  
